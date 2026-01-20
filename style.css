@@ -2,6 +2,7 @@
     --principal_color: #1b749c;
     --alice: aliceblue; 
     --fonce: #10455e;
+    overflow-x: hidden;
 }
 
 *{
@@ -10,55 +11,84 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-header{
+/* =========================
+   HEADER
+========================= */
+
+header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color:var(--alice);
-}
-body nav{
-    display: flex;
-    padding:1vh 0 1vh 8vh;
-    gap: 60vh;
-    box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.452);
+    background-color: var(--alice);
 }
 
-.navLogo{
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 8vw;
+    gap: 20vw;
+    box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.45);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navLogo {
     height: 8vh;
 }
 
-body nav ul{
+/* =========================
+   MENU (DESKTOP)
+========================= */
+
+.navMenu {
     display: flex;
-    gap: 8vh;
     align-items: center;
-
 }
 
-body nav ul li{
+/* bouton menu caché sur desktop */
+.menuBtn {
+    display: none;
+}
+
+/* liens */
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 8vh;
     list-style: none;
-    
 }
 
-body nav ul li a{
-    margin-left: -2vh;
+.navLinks li a {
     text-decoration: none;
     color: var(--fonce);
     font-weight: 700;
     font-size: 2.5vh;
+    transition: transform 0.3s ease;
 }
 
-
-nav ul li a.active {
-    height: 0.5vh;
-    transition: width 0.3s ease;
-    margin-bottom: 2.5vh;
-    margin-top: 6vh;
-    border-bottom: var(--fonce) 0.5vh solid;
+/* hover */
+.navLinks li a:hover {
+    transform: scale(1.1);
 }
 
-.navQuote{
+/* lien actif */
+.navLinks li a.active {
+    border-bottom: 0.5vh solid var(--fonce);
+    padding-bottom: 0.5vh;
+}
+
+/* CTA */
+.navQuote {
     padding-left: 13vh;
 }
+
 
 .herofond{
     position: absolute;
@@ -87,7 +117,7 @@ nav ul li a.active {
 
 .homeSlogan{
     margin: 9vh 0 0 0;
-    color: --fonce;
+    color: var(--fonce);
     line-height: 4vh;
 }
 
@@ -137,10 +167,7 @@ main button a{
     background-color: var(--fonce);
 }
 
-.btnHero2{
-    background-color: #1b749c;
-    margin-left: 2vw;
-}
+
 
 .WWD{
     display: flex;
@@ -201,8 +228,14 @@ main button a{
     display: flex;
 }
 
+.KICTitle{
+    margin-top: 20vh;
+}
+
+.titleWWD{
+    margin-top: 10vh;
+}
 .titleWWD, .KICTitle{
-    margin-top: 30vh;
     margin-bottom: 5vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 8vh;
@@ -215,12 +248,14 @@ main button a{
 
 .WWDRight {
     width: 30vw;
-    margin: 10vh 0 0 5vw;
+    margin: 10vh 0;
 }
 
 .WWDRight p{
 color: var(--principal_color);
 font-size: 3vh;
+margin-right: 15vw;
+width: 25vw;
 }
 
 .pourcent{
@@ -386,3 +421,613 @@ footer ul li a{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   TABLET (max-width: 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+    body nav {
+        gap: 10vw;
+        padding: 1vh 4vw;
+    }
+
+    body nav ul {
+        gap: 4vw;
+    }
+
+    .navQuote{
+        margin-left: -10vw;
+    }
+    .homeTitle {
+        font-size: 7vh;
+    }
+
+    .heroDesc {
+        width: 70vw;
+        font-size: 2.5vh;
+    }
+
+    .btnHero1, .btnHero2 {
+        width: 22vw;
+    }
+
+    .KICAll {
+        flex-wrap: wrap;
+    }
+
+    .pourcent {
+        width: 40vw;
+        margin-bottom: 6vh;
+    }
+
+    .valeurprc{
+        margin-top: 6vh;
+        font-size: 4vh !important;
+    }
+
+    .prc70{
+        margin-top: -1vh;
+    }
+
+    .prc60{
+        margin-top: -1.5vh;
+    }
+
+    .prc40{
+        margin-top: -3vh;
+    }
+
+    .prc90{
+        margin-top: -1.5vh;
+    }
+    .WWD {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .WWDBusiness, 
+    .WWDInfrastructure, 
+    .WWDTelecom, 
+    .WWDITServices {
+        width: 70vw;
+        margin-left: 0;
+    }
+
+    .WWDRight {
+        width: 70vw;
+        text-align: center;
+        margin: 0;
+    }
+
+    .WWDRight p{
+        text-align: center;
+        width: 70vw;
+    }
+    .WCB {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .WCBP {
+        width: 60vw;
+    }
+
+    footer {
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        gap: 4vh;
+    }
+
+
+    .footerLogo {
+        width: 7vw;
+    }
+}
+
+/* =========================
+   MOBILE (max-width: 768px)
+========================= */
+@media (max-width: 768px) {
+
+    body nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    body nav ul {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .navQuote {
+        padding-left: 0;
+    }
+
+    .herofond {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .home {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .homeTitle {
+        font-size: 6vh;
+    }
+
+    .slogan1, .slogan2 {
+        font-size: 3vh;
+    }
+
+    .heroDesc {
+        width: 85vw;
+        margin: auto;
+        font-size: 2.3vh;
+    }
+
+    .homeButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btnHero1 {
+        width: 60vw;
+        margin-left: 0;
+    }
+
+    .KICTitle{
+        padding-top: 20vh;
+    }
+
+    .pourcent img{
+        width: 30vw !important;
+    }
+
+    .prc60{
+        margin-top: -6.5vh;
+    }
+
+    .prc70{
+        margin-top: -5vh;
+    }
+
+    .prc40{
+        margin-top: -8vh;
+    }
+
+    .prc90{
+        margin-top: -6vh;
+    }
+
+    .titleWWD, .KICTitle, .whyBLIT p {
+        font-size: 5vh;
+        margin-top: -2vh;
+    }
+
+  
+    .pourcent {
+        width: 80vw;
+        font-size: 4vh;
+    }
+
+    .valeurprc {
+        font-size: 5vh !important;
+    }
+
+    .WCBP img{
+        width: 30vw;
+    }
+    .WCBP p{
+       margin-top: 4vh; 
+}
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer1, .footer2, .footer3, .footer4 {
+        width: 100%;
+    }
+
+    .contactInformation,
+    .ourService {
+        width: auto;
+    }
+}
+
+/* =========================
+   SMALL MOBILE (max-width: 480px)
+========================= */
+@media (max-width: 480px) {
+
+    /* LOGO */
+    .navLogo {
+        height: 40px;
+    }
+
+    /* MENU CONTENEUR À DROITE DU LOGO */
+    .navMenu {
+        position: relative;
+    }
+
+    /* BOUTON MENU */
+    .menuBtn {
+        background-color: var(--fonce);
+        color: var(--alice);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+    }
+
+    /* LIENS DÉROULANTS */
+    .navLinks {
+        position: absolute;
+        top: 120%;
+        left: 0;
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        padding: 1rem;
+        min-width: 220px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-5px);
+        transition: all 0.25s ease;
+        z-index: 50;
+    }
+
+    /* OUVERTURE */
+    .navMenu:hover .navLinks,
+    .navMenu:focus-within .navLinks {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* LIENS */
+    .navLinks a {
+        font-size: 1rem;
+        color: var(--fonce);
+        margin-left: 0;
+    }
+
+    .navQuote {
+        padding: 0.4rem 0.8rem;
+        border: 2px solid var(--fonce);
+        border-radius: 999px;
+        text-align: center;
+    }
+
+    /* CACHE LE MENU HORIZONTAL */
+    body nav ul {
+        display: none;
+    }
+
+
+    /* ===== GLOBAL ===== */
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    section {
+        padding: 2rem 1rem;
+    }
+
+    /* ===== HERO ===== */
+    .herofond {
+        position: absolute;
+        height: 100vh;
+        object-fit: cover;
+        margin-top: 3vh;
+    }
+
+    .home {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .homeTitle {
+        font-size: 2.2rem;
+        letter-spacing: 0.15rem;
+        margin-top: 2rem;
+    }
+
+    .homeSlogan {
+        margin-top: 2rem;
+        line-height: 1.5;
+    }
+
+    .slogan1,
+    .slogan2 {
+        font-size: 1.3rem;
+    }
+
+    .heroDesc {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 1.2rem;
+    }
+
+    .homeButton {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .btnHero1{
+        width: 100%;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    /* ===== KEY INDUSTRY CHALLENGE ===== */
+    .KICAll {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .pourcent {
+        text-align: center;
+        font-size: 1.2rem;
+
+    }
+
+
+
+    .prc60{
+        margin-top: -5vh;
+    }
+
+    .prc70{
+        margin-top: -4vh;
+    }
+
+    .prc40{
+        margin-top: -6vh;
+    }
+
+    .prc90{
+        margin-top: -4vh;
+    }
+    .valeurprc {
+        margin: 1rem 0 3rem 0;
+        font-size: 2.5rem !important;
+    }
+
+    /* ===== WHAT WE DO ===== */
+    .WWD {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .WWDLeft,
+    .WWDCenter {
+        display: contents;
+    }
+
+    .WWDBusiness,
+    .WWDInfrastructure,
+    .WWDTelecom,
+    .WWDITServices {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .WWDBusiness img,
+    .WWDInfrastructure img,
+    .WWDTelecom img,
+    .WWDITServices img {
+        height: 40px;
+    }
+
+    .WWDRight {
+        margin: 0 auto ;
+        text-align: center;
+    }
+
+    .WWDRight p {
+        font-size: 1rem;
+}
+
+    /* ===== WHY BLIT ===== */
+    .WCB {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .WCBP {
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .WCBP img {
+        width: 40%;
+        margin-bottom: 1rem;
+    }
+
+    .WCBP p {
+        font-size: 1rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footerLogo {
+        width: 60px;
+    }
+
+    .footer1 p {
+        font-size: 1rem;
+    }
+
+    .footer2 p,
+    .footer3 p,
+    .footer4 p {
+        font-size: 0.9rem;
+    }
+
+    footer ul li a {
+        font-size: 0.9rem;
+    }
+
+    .reseaux i {
+        font-size: 1.3rem;
+    }
+
+    .contactInformation, .footer3 p, .footer4 p{
+        border-bottom: none;
+        border-top: 0.1vh solid var(--alice);
+        padding-top: 1vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MENU DROPDOWN ===== */
+
+.navMenu {
+    position: relative;
+}
+
+/* bouton */
+.menuBtn {
+    background-color: var(--fonce);
+    color: var(--alice);
+    border: none;
+    padding: 1vh 2.5vh;
+    border-radius: 4vh;
+    font-size: 2.3vh;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    gap: 1vh;
+}
+
+/* dropdown caché */
+.navLinks {
+    display: flex;
+    gap: 8vh;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+
+    body nav {
+        justify-content: space-between;
+        padding: 1.5vh 5vw;
+        gap: 0;
+    }
+
+    /* cacher le menu normal */
+    .navLinks {
+        position: absolute;
+        top: 6vh;
+        right: 0;
+        background-color: var(--alice);
+        flex-direction: column;
+        gap: 2vh;
+        padding: 3vh 4vw;
+        border-radius: 1vh;
+        box-shadow: 0 1vh 3vh rgba(0,0,0,0.2);
+        min-width: 50vw;
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-1vh);
+        transition: 0.3s ease;
+    }
+
+    /* affichage dropdown */
+    .navMenu:hover .navLinks,
+    .navMenu:focus-within .navLinks {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .navLinks li a {
+        color: var(--fonce);
+        font-size: 2.5vh;
+        margin-left: 0;
+    }
+
+    .navQuote {
+        padding-left: 0;
+        border: 0.15vh solid var(--fonce);
+        border-radius: 4vh;
+        padding: 1vh 2vh;
+        text-align: center;
+    }
+
+    /* afficher bouton */
+    .menuBtn {
+        display: flex;
+    }
+}
