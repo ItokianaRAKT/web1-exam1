@@ -10,6 +10,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html body{
+        max-width: 100vw;
+        object-fit: cover;
+}
+
 header{
     position: sticky;
     top: 0;
@@ -361,113 +366,51 @@ footer ul li a{
 
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
-    }
+    /* =========================
+   TABLET / SMALL SCREEN
+   max-width: 768px
+========================= */
 
-    h1 {
-        font-size: 5vh;
-        letter-spacing: 0.3vh;
-    }
 
-    .serviceWe {
-        font-size: 2.2vh;
-        width: 90vw;
-    }
 
-    .services img {
-        width: 90%;
-    }
-
-    .serviceST p {
-        font-size: 2.3vh;
-    }
-
-    .serviceST img {
-        width: 6vw;
-    }
-
-    .serviceDesc {
-        font-size: 2.2vh;
-        line-height: 3.2vh;
-    }
-
-    .approachTitle,
-    .WhoAreTittle {
-        font-size: 5vh;
-    }
-
-    .approachDesc {
-        font-size: 2.2vh;
-        text-align: center;
-    }
-
-    .approachUp,
-    .approachDwn {
-        flex-direction: column;
+    nav {
+        display: flex;
         align-items: center;
-        gap: 3vh;
+        justify-content: space-between;
+        padding: 1rem 3vw;
+        height: 8vh;
     }
 
-    .approach div div div {
-        width: 80vw;
-        height: auto;
-        padding: 2vh 4vw;
-    }
-
-    .approachNum {
-        font-size: 4vh !important;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 3vh;
-    }
-
-    .footerLogo {
-        width: 12vw;
-    }
-}
-
-
-
-
-
-
-
-
-@media (max-width: 480px) {
-/* LOGO */
     .navLogo {
-        height: 40px;
+        height: 7vh;
+        flex-shrink: 0;
+        margin-left: 1vw;
     }
 
-    /* MENU CONTENEUR À DROITE DU LOGO */
-    .navMenu {
-        position: relative;
-    }
-
-    /* BOUTON MENU */
+    /* bouton menu visible */
     .menuBtn {
+        margin-right: 1vw;
+        display: flex;
+        height: 5vh;
+        align-items: center;
+        gap: 0.4rem;
         background-color: var(--fonce);
         color: var(--alice);
         border: none;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 1.5rem;
+        width: 16vw;
         border-radius: 999px;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
         cursor: pointer;
+        white-space: nowrap;
     }
 
-    /* LIENS DÉROULANTS */
+    /* menu déroulant aligné à droite du bouton */
     .navLinks {
         position: absolute;
         top: 120%;
-        left: 0;
+        right: 0;                 /* 🔥 aligné à droite du bouton */
         background-color: white;
         border-radius: 0.75rem;
         box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -485,7 +428,7 @@ footer ul li a{
         z-index: 50;
     }
 
-    /* OUVERTURE */
+    /* ouverture menu */
     .navMenu:hover .navLinks,
     .navMenu:focus-within .navLinks {
         opacity: 1;
@@ -493,7 +436,183 @@ footer ul li a{
         transform: translateY(0);
     }
 
-    /* LIENS */
+    /* liens */
+    .navLinks a {
+        color: var(--fonce);
+        margin-left: 0;
+        font-size: 2.3vh;            /* légèrement plus petit */
+        font-weight: 700;
+    }
+
+    .navQuote {
+        padding: 0.4rem 0.8rem;
+        border: 2px solid var(--fonce);
+        border-radius: 999px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 5vh;
+        letter-spacing: 0.3vh;
+    }
+
+    .serviceWe {
+        font-size: 2.2vh;
+        width: 90vw;
+    }
+
+    .services img {
+        width: 90%;
+        margin: 2vh 0 -2vh 0;
+    }
+
+
+    .serviceST p {
+        font-size: 2.3vh;
+        margin-top: 4vh;
+    }
+
+
+
+    .serviceST img {
+        width: 6vw;
+    }
+
+    .serviceDesc {
+        font-size: 2.2vh;
+        line-height: 3.2vh;
+    }
+
+    .approachTitle,
+    .WhoAreTittle {
+        font-size: 5vh;
+    }
+
+    .approachTitle{
+        margin-bottom: -2vh;
+    }
+
+    .approachDesc {
+        font-size: 2.2vh;
+        text-align: center;
+    }
+
+    .approachUp,
+    .approachDwn {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .approachUp{
+        margin-bottom: -1.5vh;
+    }
+    .approach div div div {
+        width: 80vw;
+        height: auto;
+        padding: 2vh 4vw;
+    }
+
+    .approachNum {
+        font-size: 4vh !important;
+    }
+
+      footer {
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .footer1, .footer2, .footer3, .footer4 {
+        width: 100%;
+    }
+
+    .contactInformation,
+    .ourService {
+        width: auto;
+    }
+
+        .contactInformation, .footer3 p, .footer4 p{
+        border-bottom: none;
+        border-top: 0.1vh solid var(--alice) ;
+        padding-top: 1vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+    @media (max-width: 480px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 3vw;
+    }
+
+    .navLogo {
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    /* bouton menu visible */
+    .menuBtn {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background-color: var(--fonce);
+        color: var(--alice);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    /* menu déroulant aligné à droite du bouton */
+    .navLinks {
+        position: absolute;
+        top: 120%;
+        right: 0;                 /* 🔥 aligné à droite du bouton */
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        padding: 1rem;
+        min-width: 220px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-5px);
+        transition: all 0.25s ease;
+        z-index: 50;
+    }
+
+    /* ouverture menu */
+    .navMenu:hover .navLinks,
+    .navMenu:focus-within .navLinks {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* liens */
     .navLinks a {
         font-size: 1rem;
         color: var(--fonce);
@@ -505,12 +624,13 @@ footer ul li a{
         border: 2px solid var(--fonce);
         border-radius: 999px;
         text-align: center;
+        white-space: nowrap;
     }
 
-    /* CACHE LE MENU HORIZONTAL */
-    body nav ul {
-        display: none;
-    }
+    /* anti-scroll horizontal */
+
+
+
 
 
     /* ===== GLOBAL ===== */

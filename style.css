@@ -2,13 +2,14 @@
     --principal_color: #1b749c;
     --alice: aliceblue; 
     --fonce: #10455e;
-    overflow-x: hidden;
+
 }
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 /* =========================
@@ -540,20 +541,69 @@ footer ul li a{
 ========================= */
 @media (max-width: 768px) {
 
-    body nav {
-        flex-direction: column;
+    nav {
+        flex-direction: row;         /* reste horizontal */
+        justify-content: space-between;
         align-items: center;
-        gap: 2vh;
+        padding: 1vh 3vw;           /* un peu plus serré */
+        box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.452);
     }
 
-    body nav ul {
-        flex-direction: column;
-        gap: 2vh;
+    /* logo un peu plus petit si besoin */
+    .navLogo {
+        height: 7vh;
+        flex-shrink: 0;
     }
 
+    /* menu à droite */
+    .navMenu {
+        display: flex;
+        align-items: center;
+        margin-left: auto;           /* pousse à droite */
+    }
+
+    /* bouton menu invisible à cette taille */
+    .menuBtn {
+        display: none;
+    }
+
+    /* nav links horizontales normales */
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;                    /* espace réduit */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navLinks li a {
+        font-size: 2.3vh;            /* légèrement plus petit */
+        font-weight: 700;
+        color: var(--fonce);
+        text-decoration: none;
+        margin-left: 0;
+    }
+
+    .navLinks li a.active {
+        border-bottom: 0.5vh solid var(--fonce);
+        padding-bottom: 0.5vh;
+    }
+
+    /* request a quote plus compacte pour éviter scroll */
     .navQuote {
-        padding-left: 0;
+        padding-left: 1.5vw;         /* réduit pour tenir dans l’écran */
+        white-space: nowrap;          /* force le texte sur une ligne */
     }
+
+    /* sécurité anti-scroll horizontal */
+    body {
+        overflow-x: hidden;
+    }
+
+
+
+
 
     .herofond {
         height: 100vh;
@@ -647,6 +697,12 @@ footer ul li a{
     .contactInformation,
     .ourService {
         width: auto;
+    }
+
+        .contactInformation, .footer3 p, .footer4 p{
+        border-bottom: none;
+        border-top: 0.1vh solid var(--alice);
+        padding-top: 1vh;
     }
 }
 
