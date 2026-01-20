@@ -1,0 +1,196 @@
+
+:root{
+    --principal_color: #1b749c;
+    --alice: aliceblue; 
+    --fonce: #10455e;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color:var(--alice);
+}
+body nav{
+    display: flex;
+    padding:1vh 0 1vh 8vh;
+    gap: 60vh;
+    box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.452);
+}
+
+.navLogo{
+    height: 8vh;
+}
+
+body nav ul{
+    display: flex;
+    gap: 8vh;
+    align-items: center;
+
+}
+
+body nav ul li{
+    list-style: none;
+    
+}
+
+body nav ul li a{
+    margin-left: -2vh;
+    text-decoration: none;
+    color: var(--fonce);
+    font-weight: 700;
+    font-size: 2.5vh;
+}
+
+.navQuote{
+    padding-left: 13vh;
+}
+
+
+nav ul li a.active {
+    height: 0.5vh;
+    transition: width 0.3s ease;
+    margin-bottom: 2.5vh;
+    margin-top: 6vh;
+    border-bottom: var(--fonce) 0.5vh solid;
+}
+
+
+
+
+
+.about1 p{
+        margin-top: 4vh;
+    font-size: 3vh;
+    width: 40vw;
+    line-height: 4vh;
+    font-weight: 400;
+    color: var(--fonce);
+}
+
+.whoTittle, .missionTittle, .valuesTittle, .workTittle, .partenaireTittle{
+    font-size: 8vh !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5vh;
+    margin: 5vh 0 1vh 0;
+}
+
+.airtel{
+    width: 6vw;
+}
+
+.IBM{
+    width: 9vw;
+    margin-bottom: -2vh;
+}
+
+.couleur{
+    margin-bottom: -2vh;
+}
+
+.partenairesLogo{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3vh;
+}
+
+.vert{
+width: 6vw;
+}
+
+.global{
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.global p{
+    font-size: 2vh;
+    color: green;
+}
+
+
+
+
+
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fonce);
+    padding: 3vh 5vw;
+}
+
+footer ul li{
+    list-style: none;
+    line-height: 4vh;
+}
+footer ul li a{
+    text-decoration: none;
+    color: var(--alice);
+    font-size: 2vh;
+
+}
+
+
+.footerLogo{
+    width: 4vw;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.footer1 p{
+    color: var(--alice);
+    line-height: 4vh;
+    font-size: 3vh;
+    font-weight: 600;
+}
+.footer2 p, .footer3 p, .footer4 p{
+    color: var(--alice);
+    line-height: 3vh;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.footer3 p, .footer4 p{
+    border-bottom: 0.1vh solid var(--alice);
+    font-weight: 600;
+    font-size: 3vh;
+}
+
+.contactInformation{
+    border-bottom: 0.1vh solid var(--alice);
+    width: 14.5vw;
+    font-weight: 500;
+    font-size: 3vh !important; 
+}
+
+.ourService{
+    width: 9vw;
+}
+.footer3 ul li a, .footer4 ul li a{
+    line-height: 3vh;
+}
+
+
+.reseaux i{
+    color: var(--alice);
+    padding: 3vh 1vw;
+    font-size: 3vh;
+
+    
+}
