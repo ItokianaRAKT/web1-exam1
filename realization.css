@@ -2,15 +2,20 @@
   --principal_color: #1b749c;
   --alice: aliceblue;
   --fonce: #10455e;
-  overflow-x: hidden;
+    overflow-x:hidden;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+
 }
 
+.menuBtn {
+  display: none;
+}
 
 
 .realizationTittle {
@@ -437,17 +442,28 @@ footer ul li a {
   }
 }
 
+
+
 /* =========================
    SMALL MOBILE (max-width: 480px)
 ========================= */
 @media (max-width: 480px) {
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 3vw;
-  }
 
+
+    nav{
+    height: 4.3vh;
+  }
+  .menuBtn{
+    margin-top: 0.3vh;
+    width: 10.5vh;
+    height: 3.5vh;
+    font-size: 2vh;
+}
+
+.realizationTittle{
+      margin: 10vh auto 2vh auto;
+
+}
   .navLogo {
     height: 40px;
     flex-shrink: 0;
@@ -539,13 +555,16 @@ footer ul li a {
   .caseB img {
     max-width: 320px;
     width: 100%;
+    margin-left: -3vw;
+    margin-top: 2vh;
   }
 
   .caseT p,
   .caseB p {
     font-size: 0.95rem;
     line-height: 1.5;
-    margin-top: -4vh;
+    margin-top: -5vh;
+text-align: center;
   }
 
   .caseST {
@@ -555,11 +574,13 @@ footer ul li a {
 
   .keyImpactTittle {
     font-size: 1.8rem;
+    margin: -2vh auto 2vh auto;
   }
 
   .stats {
     width: 100%;
     padding: 1.5rem;
+    margin: 0vh auto;
   }
 
   .valeur {

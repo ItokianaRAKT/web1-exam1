@@ -16,6 +16,7 @@ nav {
   padding: 1vh 8vw;
   gap: 20vw;
   box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.45);
+
 }
 
 /* =========================
@@ -36,9 +37,7 @@ nav {
 }
 
 /* bouton menu caché sur desktop */
-button .menuBtn {
 
-}
 
 /* liens */
 .navLinks {
@@ -77,6 +76,7 @@ button .menuBtn {
 
 @media (max-width: 1024px) {
   body nav {
+    
     gap: 10vw;
     padding: 1vh 4vw;
   }
@@ -212,11 +212,17 @@ button .menuBtn {
 
 
 @media (max-width: 480px) {
+  header{
+      position: fixed;
+  top: 0;
+  width: 100%;
+  }
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3vw;
+
   }
 
   .navLogo {
