@@ -1,0 +1,286 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--alice);
+}
+
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 8vw;
+  gap: 20vw;
+  box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.45);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navLogo {
+  height: 8vh;
+}
+
+/* =========================
+   MENU (DESKTOP)
+========================= */
+
+.navMenu {
+  display: flex;
+  align-items: center;
+}
+
+/* bouton menu caché sur desktop */
+button .menuBtn {
+}
+
+/* liens */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 8vh;
+  list-style: none;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: var(--fonce);
+  font-weight: 700;
+  font-size: 2.5vh;
+  transition: transform 0.3s ease;
+}
+
+/* hover */
+.navLinks li a:hover {
+  transform: scale(1.1);
+}
+
+/* lien actif */
+.navLinks li a.active {
+  border-bottom: 0.5vh solid var(--fonce);
+  padding-bottom: 0.5vh;
+}
+
+/* CTA */
+.navQuote {
+  padding-left: 13vh;
+}
+
+
+
+
+@media (max-width: 1024px) {
+  body nav {
+    gap: 10vw;
+    padding: 1vh 4vw;
+  }
+
+  body nav ul {
+    gap: 4vw;
+  }
+
+  .navQuote {
+    margin-left: -10vw;
+  }
+}
+
+
+
+
+
+@media (max-width: 900px) {
+  body nav {
+    justify-content: space-between;
+    padding: 1.5vh 5vw;
+    gap: 0;
+  }
+
+  /* cacher le menu normal */
+  .navLinks {
+    position: absolute;
+    top: 6vh;
+    right: 0;
+    background-color: var(--alice);
+    flex-direction: column;
+    gap: 2vh;
+    padding: 3vh 4vw;
+    border-radius: 1vh;
+    box-shadow: 0 1vh 3vh rgba(0, 0, 0, 0.2);
+    min-width: 50vw;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-1vh);
+    transition: 0.3s ease;
+  }
+
+  /* affichage dropdown */
+  .navMenu:hover .navLinks,
+  .navMenu:focus-within .navLinks {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navLinks li a {
+    color: var(--fonce);
+    font-size: 2.5vh;
+    margin-left: 0;
+  }
+
+  .navQuote {
+    padding-left: 0;
+    border: 0.15vh solid var(--fonce);
+    border-radius: 4vh;
+    padding: 1vh 2vh;
+    text-align: center;
+  }
+
+  /* afficher bouton */
+  .menuBtn {
+    display: flex;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row; /* reste horizontal */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vw; /* un peu plus serré */
+    box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.452);
+  }
+
+  /* logo un peu plus petit si besoin */
+  .navLogo {
+    height: 7vh;
+    flex-shrink: 0;
+  }
+
+  /* menu à droite */
+  .navMenu {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* pousse à droite */
+  }
+
+  /* bouton menu invisible à cette taille */
+  .menuBtn {
+    display: none;
+  }
+
+  /* nav links horizontales normales */
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw; /* espace réduit */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navLinks li a {
+    font-size: 2.3vh; /* légèrement plus petit */
+    font-weight: 700;
+    color: var(--fonce);
+    text-decoration: none;
+    margin-left: 0;
+  }
+
+  .navLinks li a.active {
+    border-bottom: 0.5vh solid var(--fonce);
+    padding-bottom: 0.5vh;
+  }
+
+  /* request a quote plus compacte pour éviter scroll */
+  .navQuote {
+    padding-left: 1.5vw; /* réduit pour tenir dans l’écran */
+    white-space: nowrap; /* force le texte sur une ligne */
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3vw;
+  }
+
+  .navLogo {
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  /* bouton menu visible */
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--fonce);
+    color: var(--alice);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  /* menu déroulant aligné à droite du bouton */
+  .navLinks {
+    position: absolute;
+    top: 120%;
+    right: 0; /* 🔥 aligné à droite du bouton */
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    min-width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-5px);
+    transition: all 0.25s ease;
+    z-index: 50;
+  }
+
+  /* ouverture menu */
+  .navMenu:hover .navLinks,
+  .navMenu:focus-within .navLinks {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* liens */
+  .navLinks a {
+    font-size: 1rem;
+    color: var(--fonce);
+    margin-left: 0;
+  }
+
+  .navQuote {
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--fonce);
+    border-radius: 999px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
