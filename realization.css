@@ -11,52 +11,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: var(--alice);
-}
-body nav {
-  display: flex;
-  padding: 1vh 0 1vh 8vh;
-  gap: 60vh;
-  box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.452);
-}
 
-.navLogo {
-  height: 8vh;
-}
-
-body nav ul {
-  display: flex;
-  gap: 8vh;
-  align-items: center;
-}
-
-body nav ul li {
-  list-style: none;
-}
-
-body nav ul li a {
-  margin-left: -2vh;
-  text-decoration: none;
-  color: var(--fonce);
-  font-weight: 700;
-  font-size: 2.5vh;
-}
-
-.navQuote {
-  padding-left: 13vh;
-}
-
-nav ul li a.active {
-  height: 0.5vh;
-  transition: width 0.3s ease;
-  margin-bottom: 2.5vh;
-  margin-top: 6vh;
-  border-bottom: var(--fonce) 0.5vh solid;
-}
 
 .realizationTittle {
   margin-top: 5vh;
@@ -611,14 +566,5 @@ footer ul li a {
     font-size: 1.6rem !important;
   }
 
-  footer p {
-    font-size: 0.85rem;
-  }
-
-  .reseaux i {
-    font-size: 1.2rem;
-  }
-  .stats {
-    width: 77vw;
-  }
+  
 }

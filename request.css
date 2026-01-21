@@ -1,187 +1,158 @@
-:root {
-  --principal_color: #1b749c;
-  --alice: aliceblue;
-  --fonce: #10455e;
-}
+/* =========================
+   BASE
+========================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: var(--alice);
-}
-body nav {
-  display: flex;
-  padding: 1vh 0 1vh 8vh;
-  gap: 60vh;
-  box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.452);
-}
-
-.navLogo {
-  height: 8vh;
-}
-
-body nav ul {
-  display: flex;
-  gap: 8vh;
-  align-items: center;
-}
-
-body nav ul li {
-  list-style: none;
-}
-
-body nav ul li a {
-  margin-left: -2vh;
-  text-decoration: none;
-  color: var(--fonce);
-  font-weight: 700;
-  font-size: 2.5vh;
-}
-
-.navQuote {
-  padding-left: 13vh;
-  border-bottom: 0.1vh solid var(--fonce);
-}
-
-nav ul li a.active {
-  height: 0.5vh;
-  transition: width 0.3s ease;
-  margin-bottom: 2.5vh;
-  margin-top: 6vh;
-  border-bottom: var(--fonce) 0.5vh solid;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  font-family: "Inter", "Montserrat", sans-serif;
+  color: #0f172a;
 }
 
-/* PAGE SPLIT */
 .page {
-  display: flex;
   width: 100%;
-  height: 100%;
-}
-
-/* LEFT SIDE */
-.left-side {
-  width: 50vw;
-  height: 100vh;
-}
-
-/* RIGHT SIDE */
-.right-side {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  overflow-x: hidden; /* kill scroll horizontal */
+}
+
+/* =========================
+   LAYOUT PC
+========================= */
+
+.left-side {
+  flex: 1;
+  background: #10455e; /* bloc visuel, simple */
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 6vh 4vw;
 }
 
-/* FORM */
+/* =========================
+   FORM
+========================= */
+
 .quote-form {
-  width: 32vw;
-  height: auto;
-  background: white;
-  padding: 4vh 3vw;
-  border-radius: 1.5vw;
-  box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
 }
 
-/* TEXT */
-h1 {
-  font-size: 2.2vh;
-  margin-bottom: 1vh;
+.quote-form h1 {
+  margin: 0;
+  font-size: 2rem;
   color: #10455e;
 }
 
 .subtitle {
-  font-size: 1.4vh;
-  margin-bottom: 3vh;
-  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
 }
 
-/* INPUT GROUPS */
-.row {
-  display: flex;
-  gap: 1vw;
-  margin-bottom: 2vh;
-}
+/* =========================
+   INPUTS
+========================= */
 
-.block {
-  margin-bottom: 2vh;
-}
-
-.label {
-  font-size: 1.4vh;
-  margin-bottom: 0.8vh;
-}
-
-/* INPUTS */
 input,
 select,
 textarea {
   width: 100%;
-  padding: 1.2vh;
-  font-size: 1.4vh;
-  border-radius: 0.6vw;
-  border: 1px solid #ccc;
+  padding: 14px 16px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #10455e;
 }
 
 textarea {
-  resize: none;
-  height: 10vh;
+  min-height: 120px;
+  resize: vertical;
 }
 
-/* CHECKBOXES */
-.checkboxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* =========================
+   ROWS
+========================= */
+
+.row {
+  display: flex;
+  gap: 1.2vw;
+}
+
+.row input {
+  flex: 1;
+}
+
+/* =========================
+   BLOCKS
+========================= */
+
+.block {
+  display: flex;
+  flex-direction: column;
   gap: 1vh;
 }
 
+.label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   CHECKBOXES
+========================= */
+
+.checkboxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1vh 1vw;
+}
+
 .checkboxes label {
-  font-size: 2vh;
   display: flex;
   align-items: center;
-  gap: 1vw;
-  white-space: nowrap;
+  gap: 8px;
+  font-size: 0.85rem;
 }
 
-.checkUp {
-  margin-right: -6vw;
-  margin-left: -5.6vw;
+.checkboxes input {
+  width: auto;
 }
 
-.checkDwnRight {
-  margin-left: -2.8vw;
-  margin-right: -3.5vw;
-}
+/* =========================
+   BUTTONS
+========================= */
 
-.checkDwnLeft {
-  margin-left: 0.8vw;
-  margin-right: 5;
-}
-
-/* BUTTONS */
 .buttons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 1vw;
-  margin-top: 3vh;
+  margin-top: 2vh;
 }
 
 button {
-  padding: 1.2vh 2.5vw;
-  border-radius: 2vw;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.9rem;
   border: none;
   cursor: pointer;
-  font-size: 1.4vh;
 }
 
 .clear {
@@ -192,160 +163,77 @@ button {
 
 .send {
   background: #10455e;
-  color: white;
+  color: #fff;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--fonce);
-  padding: 3vh 5vw;
-}
+/* =========================
+   TABLETTE ≤ 1024px
+========================= */
 
-footer ul li {
-  list-style: none;
-  line-height: 4vh;
-}
-footer ul li a {
-  text-decoration: none;
-  color: var(--alice);
-  font-size: 2vh;
-}
+@media (max-width: 1024px) {
 
-.footerLogo {
-  width: 4vw;
-}
-
-.footer1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer1 p {
-  color: var(--alice);
-  line-height: 4vh;
-  font-size: 3vh;
-  font-weight: 600;
-}
-.footer2 p,
-.footer3 p,
-.footer4 p {
-  color: var(--alice);
-  line-height: 3vh;
-  font-size: 2vh;
-  margin-bottom: 2vh;
-}
-
-.footer3 p,
-.footer4 p {
-  border-bottom: 0.1vh solid var(--alice);
-  font-weight: 600;
-  font-size: 3vh;
-}
-
-.contactInformation {
-  border-bottom: 0.1vh solid var(--alice);
-  width: 14.5vw;
-  font-weight: 500;
-  font-size: 3vh !important;
-}
-
-.ourService {
-  width: 9vw;
-}
-.footer3 ul li a,
-.footer4 ul li a {
-  line-height: 3vh;
-}
-
-.reseaux i {
-  color: var(--alice);
-  padding: 3vh 1vw;
-  font-size: 3vh;
-}
-
-@media (max-width: 768px) {
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 3vw;
-    height: 8vh;
-  }
-
-  .navLogo {
-    height: 7vh;
-    flex-shrink: 0;
-    margin-left: 1vw;
-  }
-
-  /* bouton menu visible */
-  .menuBtn {
-    margin-right: 1vw;
-    display: flex;
-    height: 5vh;
-    align-items: center;
-    gap: 0.4rem;
-    background-color: var(--fonce);
-    color: var(--alice);
-    border: none;
-    padding: 0.5rem 1.5rem;
-    width: 16vw;
-    border-radius: 999px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  /* menu déroulant aligné à droite du bouton */
-  .navLinks {
-    position: absolute;
-    top: 120%;
-    right: 0; /* 🔥 aligné à droite du bouton */
-    background-color: white;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    min-width: 220px;
-
-    display: flex;
+  .page {
     flex-direction: column;
-    gap: 0.75rem;
-
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-5px);
-    transition: all 0.25s ease;
-    z-index: 50;
   }
 
-  /* ouverture menu */
-  .navMenu:hover .navLinks,
-  .navMenu:focus-within .navLinks {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+  .left-side {
+    height: 25vh;
+    width: 100%;
   }
 
-  /* liens */
-  .navLinks a {
-    color: var(--fonce);
-    margin-left: 0;
-    font-size: 2.3vh; /* légèrement plus petit */
-    font-weight: 700;
+  .right-side {
+    padding: 6vh 8vw;
   }
 
-  .navQuote {
-    padding: 0.4rem 0.8rem;
-    border: 2px solid var(--fonce);
-    border-radius: 999px;
-    text-align: center;
-    white-space: nowrap;
+  .row {
+    gap: 2vw;
   }
 
-  body {
-    overflow-x: hidden;
+  .checkboxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   PIXEL 7 ≤ 430px
+========================= */
+
+@media (max-width: 430px) {
+
+  .left-side {
+    height: 20vh;
+  }
+
+  .right-side {
+    padding: 5vh 6vw;
+  }
+
+  .quote-form h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 0.9rem;
+    padding: 12px 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  button {
+    width: 100%;
   }
 }

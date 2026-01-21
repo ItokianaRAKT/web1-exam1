@@ -550,82 +550,6 @@ footer ul li a {
    SMALL MOBILE (max-width: 480px)
 ========================= */
 @media (max-width: 480px) {
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 3vw;
-  }
-
-  .navLogo {
-    height: 40px;
-    flex-shrink: 0;
-  }
-
-  /* bouton menu visible */
-  .menuBtn {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    background-color: var(--fonce);
-    color: var(--alice);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
-  /* menu déroulant aligné à droite du bouton */
-  .navLinks {
-    position: absolute;
-    top: 120%;
-    right: 0; /* 🔥 aligné à droite du bouton */
-    background-color: white;
-    border-radius: 0.75rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    min-width: 220px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-5px);
-    transition: all 0.25s ease;
-    z-index: 50;
-  }
-
-  /* ouverture menu */
-  .navMenu:hover .navLinks,
-  .navMenu:focus-within .navLinks {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  /* liens */
-  .navLinks a {
-    font-size: 1rem;
-    color: var(--fonce);
-    margin-left: 0;
-  }
-
-  .navQuote {
-    padding: 0.4rem 0.8rem;
-    border: 2px solid var(--fonce);
-    border-radius: 999px;
-    text-align: center;
-    white-space: nowrap;
-  }
-  section {
-    padding: 2rem 1rem;
-  }
-
   /* ===== HERO ===== */
   .herofond {
     position: absolute;
@@ -770,41 +694,6 @@ footer ul li a {
   }
 
   /* ===== FOOTER ===== */
-  footer {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .footerLogo {
-    width: 60px;
-  }
-
-  .footer1 p {
-    font-size: 1rem;
-  }
-
-  .footer2 p,
-  .footer3 p,
-  .footer4 p {
-    font-size: 0.9rem;
-  }
-
-  footer ul li a {
-    font-size: 0.9rem;
-  }
-
-  .reseaux i {
-    font-size: 1.3rem;
-  }
-
-  .contactInformation,
-  .footer3 p,
-  .footer4 p {
-    border-bottom: none;
-    border-top: 0.1vh solid var(--alice);
-    padding-top: 1vh;
-  }
 }
 
 /* ===== MENU DROPDOWN ===== */
