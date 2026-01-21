@@ -11,7 +11,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* NAVIGATION */
 body nav {
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,6 @@ body nav ul li a:hover {
   padding-left: 2vw;
 }
 
-/* HOME SECTION */
 .home {
   padding: 5vh 5vw;
   text-align: center;
@@ -122,7 +120,6 @@ body nav ul li a:hover {
   max-height: 40vh;
 }
 
-/* WHAT WE DO */
 .homeWhatWeDo {
   padding: 5vh 5vw;
 }
@@ -161,7 +158,6 @@ body nav ul li a:hover {
   color: #10455e;
 }
 
-/* WWD ITEMS */
 .WWDBusiness,
 .WWDInfrastructure,
 .WWDTelecom,
@@ -178,7 +174,6 @@ body nav ul li a:hover {
   height: 6vh;
 }
 
-/* KEY INDUSTRY CHALLENGES */
 .KeyIndustryChallenge {
   padding: 5vh 5vw;
 }
@@ -210,7 +205,6 @@ body nav ul li a:hover {
   min-height: 20vh;
 }
 
-/* Chiffres en background */
 .KICAll > div:nth-child(1) {
   background-image: url("soixante.png");
 }
@@ -230,7 +224,6 @@ body nav ul li a:hover {
   margin-bottom: 1vh;
 }
 
-/* WHY US */
 .whyUs {
   padding: 5vh 5vw;
   text-align: center;
@@ -255,7 +248,6 @@ body nav ul li a:hover {
   text-align: center;
 }
 
-/* FOOTER */
 footer {
   padding: 5vh 5vw;
   background-color: var(--light_gray);
@@ -263,7 +255,6 @@ footer {
   font-size: 1.8vh;
 }
 
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
   .homeDivision {
     flex-direction: column;

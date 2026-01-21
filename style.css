@@ -3,7 +3,6 @@
   --alice: aliceblue;
   --fonce: #10455e;
     overflow-x:hidden;
-
 }
 
 * {
@@ -11,10 +10,6 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 .herofond {
   position: absolute;
@@ -339,9 +334,6 @@ footer ul li a {
   font-size: 3vh;
 }
 
-/* =========================
-   TABLET (max-width: 1024px)
-========================= */
 @media (max-width: 1024px) {
   .homeTitle {
     font-size: 7vh;
@@ -429,13 +421,7 @@ footer ul li a {
   }
 }
 
-/* =========================
-   MOBILE (max-width: 768px)
-========================= */
 @media (max-width: 768px) {
-  
-
-  /* sécurité anti-scroll horizontal */
   body {
     overflow-x: hidden;
   }
@@ -548,9 +534,6 @@ footer ul li a {
   }
 }
 
-/* =========================
-   SMALL MOBILE (max-width: 480px)
-========================= */
 @media (max-width: 480px) {
   /* ===== HERO ===== */
   .herofond {
@@ -603,7 +586,6 @@ footer ul li a {
     font-size: 1rem;
   }
 
-  /* ===== KEY INDUSTRY CHALLENGE ===== */
   .KICAll {
     flex-direction: column;
     gap: 3rem;
@@ -635,7 +617,6 @@ footer ul li a {
     font-size: 2.5rem !important;
   }
 
-  /* ===== WHAT WE DO ===== */
   .WWD {
     flex-direction: column;
     gap: 1.5rem;
@@ -673,7 +654,6 @@ footer ul li a {
     font-size: 1rem;
   }
 
-  /* ===== WHY BLIT ===== */
   .WCB {
     flex-direction: column;
     gap: 2rem;
@@ -701,16 +681,12 @@ footer ul li a {
     margin-top: 5vh;
   }
 
-  /* ===== FOOTER ===== */
 }
-
-/* ===== MENU DROPDOWN ===== */
 
 .navMenu {
   position: relative;
 }
 
-/* bouton */
 .menuBtn {
   background-color: var(--fonce);
   color: var(--alice);
@@ -725,13 +701,11 @@ footer ul li a {
   gap: 1vh;
 }
 
-/* dropdown caché */
 .navLinks {
   display: flex;
   gap: 8vh;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   body nav {
     justify-content: space-between;
@@ -739,7 +713,6 @@ footer ul li a {
     gap: 0;
   }
 
-  /* cacher le menu normal */
   .navLinks {
     position: absolute;
     top: 6vh;
@@ -758,7 +731,6 @@ footer ul li a {
     transition: 0.3s ease;
   }
 
-  /* affichage dropdown */
   .navMenu:hover .navLinks,
   .navMenu:focus-within .navLinks {
     opacity: 1;
@@ -780,7 +752,6 @@ footer ul li a {
     text-align: center;
   }
 
-  /* afficher bouton */
   .menuBtn {
     display: flex;
   }

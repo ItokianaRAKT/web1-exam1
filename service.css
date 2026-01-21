@@ -17,10 +17,7 @@ body {
 
 .menuBtn {
   display: none;
-  
 }
-
-
 
 h1 {
   margin-top: 5vh;
@@ -272,10 +269,6 @@ footer ul li a {
 }
 
 @media (max-width: 768px) {
-  /* =========================
-   TABLET / SMALL SCREEN
-   max-width: 768px
-========================= */
 
   nav {
     display: flex;
@@ -291,7 +284,6 @@ footer ul li a {
     margin-left: 1vw;
   }
 
-  /* bouton menu visible */
   .menuBtn {
     margin-right: 1vw;
     display: flex;
@@ -310,21 +302,18 @@ footer ul li a {
     white-space: nowrap;
   }
 
-  /* menu déroulant aligné à droite du bouton */
   .navLinks {
     position: absolute;
     top: 120%;
-    right: 0; /* 🔥 aligné à droite du bouton */
+    right: 0;
     background-color: white;
     border-radius: 0.75rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     min-width: 220px;
-
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-
     opacity: 0;
     pointer-events: none;
     transform: translateY(-5px);
@@ -332,7 +321,6 @@ footer ul li a {
     z-index: 50;
   }
 
-  /* ouverture menu */
   .navMenu:hover .navLinks,
   .navMenu:focus-within .navLinks {
     opacity: 1;
@@ -340,11 +328,10 @@ footer ul li a {
     transform: translateY(0);
   }
 
-  /* liens */
   .navLinks a {
     color: var(--fonce);
     margin-left: 0;
-    font-size: 2.3vh; /* légèrement plus petit */
+    font-size: 2.3vh;
     font-weight: 700;
   }
 
@@ -450,10 +437,6 @@ footer ul li a {
 }
 
 @media (max-width: 480px) {
-  
-  /* anti-scroll horizontal */
-
-  /* ===== GLOBAL ===== */
   body {
     overflow-x: hidden;
   }
@@ -475,7 +458,6 @@ footer ul li a {
     height: 3.5vh;
     font-size: 2vh;
 }
-  /* ===== HERO ===== */
   .herofond {
     position: absolute;
     height: 100vh;
@@ -526,7 +508,6 @@ footer ul li a {
     height: 48px;
     font-size: 1rem;
   }
-  /* ===== GLOBAL ===== */
   p,
   a,
   h1,
@@ -541,7 +522,6 @@ footer ul li a {
     padding: 2rem 1rem;
   }
 
-  /* ===== TITRES ===== */
   h1 {
     font-size: 2.2rem;
     letter-spacing: 0.15rem;
@@ -553,7 +533,6 @@ footer ul li a {
     width: 100%;
   }
 
-  /* ===== SERVICES ===== */
   .services img {
     width: 100%;
   }
@@ -582,7 +561,6 @@ footer ul li a {
     line-height: 1.6;
   }
 
-  /* ===== APPROACH ===== */
   .approachTitle
   {
     font-size: 2rem;
@@ -609,7 +587,4 @@ footer ul li a {
     font-size: 2rem !important;
   }
 
-  /* ===== FOOTER ===== */
-
-  
 }

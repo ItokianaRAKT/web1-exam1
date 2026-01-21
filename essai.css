@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   gap: 3vh;
-  flex-wrap: wrap; /* utile si écran trop petit */
+  flex-wrap: wrap;
 }
 
 .serviceWrapper {
