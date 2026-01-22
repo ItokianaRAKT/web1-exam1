@@ -2,7 +2,7 @@
   --principal_color: #1b749c;
   --alice: aliceblue;
   --fonce: #10455e;
-    overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 * {
@@ -677,10 +677,9 @@ footer ul li a {
     hyphens: auto;
   }
 
-  .whyBLIT p{
+  .whyBLIT p {
     margin-top: 5vh;
   }
-
 }
 
 .navMenu {

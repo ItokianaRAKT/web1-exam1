@@ -2,7 +2,7 @@
   --principal_color: #1b749c;
   --alice: aliceblue;
   --fonce: #10455e;
-    overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 * {
@@ -423,20 +423,19 @@ footer ul li a {
 }
 
 @media (max-width: 480px) {
-    nav{
+  nav {
     height: 4.3vh;
   }
-  .menuBtn{
+  .menuBtn {
     margin-top: 0.3vh;
     width: 10.5vh;
     height: 3.5vh;
     font-size: 2vh;
-}
+  }
 
-.realizationTittle{
-      margin: 10vh auto 2vh auto;
-
-}
+  .realizationTittle {
+    margin: 10vh auto 2vh auto;
+  }
   .navLogo {
     height: 40px;
     flex-shrink: 0;
@@ -550,5 +549,4 @@ footer ul li a {
   .valeur {
     font-size: 1.6rem !important;
   }
-
 }

@@ -12,7 +12,6 @@ nav {
   padding: 1vh 8vw;
   gap: 20vw;
   box-shadow: 0.1vh 0.1vh 1vh rgba(128, 128, 128, 0.45);
-
 }
 
 .navLogo {
@@ -119,7 +118,7 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1vh 3vw;
@@ -134,7 +133,8 @@ nav {
   .navMenu {
     display: flex;
     align-items: center;
-    margin-left: auto;}
+    margin-left: auto;
+  }
 
   .menuBtn {
     display: none;
@@ -163,16 +163,16 @@ nav {
   }
 
   .navQuote {
-    padding-left: 1.5vw; 
+    padding-left: 1.5vw;
     white-space: nowrap;
   }
 }
 
 @media (max-width: 480px) {
-  header{
-      position: fixed;
-  top: 0;
-  width: 100%;
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
   nav {
     display: flex;

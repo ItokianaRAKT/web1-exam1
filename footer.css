@@ -1,9 +1,9 @@
-@media (max-width: 480px){
-    footer p {
+@media (max-width: 480px) {
+  footer p {
     font-size: 0.85rem;
   }
 
-  footer img{
+  footer img {
     width: 20vw !important;
   }
   .reseaux i {

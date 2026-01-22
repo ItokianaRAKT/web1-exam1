@@ -10,7 +10,7 @@ body {
 
 main {
   width: 100%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .about1 {
@@ -22,7 +22,7 @@ main {
   gap: 2.5vh;
 }
 
-.about1 img{
+.about1 img {
   position: absolute;
   width: 13vw;
   box-shadow: 1vh 1vh 1vh #10455e;
@@ -31,15 +31,15 @@ main {
   opacity: 1;
 }
 
-.interrogation{
+.interrogation {
   margin: 0% auto auto -16%;
 }
 
-.point{
+.point {
   margin: 15% 0 0 50%;
 }
 
-.trophé{
+.trophé {
   margin: 25% 0 0 -25%;
 }
 .about1 p {
@@ -52,12 +52,12 @@ main {
 .whoTittle,
 .missionTittle,
 .valuesTittle,
-.workTittle, .partenaireTittle {
+.workTittle,
+.partenaireTittle {
   font-weight: 700;
   font-size: 3rem !important;
   margin-top: 4vh;
   color: #10455e;
-
 }
 
 .partenaire {
@@ -108,20 +108,19 @@ main {
 }
 
 @media (max-width: 1024px) {
-
   .about1 {
     margin: 6vh auto;
     padding: 0 8vw;
   }
 
-  .about1 img{
+  .about1 img {
     opacity: 0;
   }
-.global p{
+  .global p {
     color: green;
   }
   .partenairesLogo {
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     gap: 4vw 6vw;
   }
 
@@ -130,9 +129,7 @@ main {
   }
 }
 
-
 @media (max-width: 430px) {
-
   .about1 {
     margin: 10vh auto;
     padding: 0 7vw;
@@ -142,11 +139,10 @@ main {
     font-size: 1rem;
     font-size: 1rem;
     line-height: 1.6;
-    color:#10455e;
-
+    color: #10455e;
   }
 
-  .about1 img{
+  .about1 img {
     opacity: 0;
   }
 
@@ -156,14 +152,13 @@ main {
   .workTittle {
     font-size: 1.5rem;
     margin-bottom: -5vh;
-
   }
 
   .partenaire {
     margin: 8vh 0;
   }
 
-  .global p{
+  .global p {
     color: green;
   }
   .partenaireTittle {

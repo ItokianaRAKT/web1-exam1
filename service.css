@@ -269,7 +269,6 @@ footer ul li a {
 }
 
 @media (max-width: 768px) {
-
   nav {
     display: flex;
     align-items: center;
@@ -449,22 +448,22 @@ footer ul li a {
     padding: 2rem 1rem;
   }
 
-  nav{
+  nav {
     height: 4.3vh;
   }
-  .menuBtn{
+  .menuBtn {
     margin-top: 0.3vh;
     width: 10.5vh;
     height: 3.5vh;
     font-size: 2vh;
-}
+  }
   .herofond {
     position: absolute;
     height: 100vh;
     object-fit: cover;
   }
 
-  h1{
+  h1 {
     margin: 10vh auto 2vh auto;
   }
   .home {
@@ -561,8 +560,7 @@ footer ul li a {
     line-height: 1.6;
   }
 
-  .approachTitle
-  {
+  .approachTitle {
     font-size: 2rem;
     letter-spacing: 0.15rem;
     margin: -3vh 0 2vh 0;
@@ -586,5 +584,4 @@ footer ul li a {
   .approachNum {
     font-size: 2rem !important;
   }
-
 }
